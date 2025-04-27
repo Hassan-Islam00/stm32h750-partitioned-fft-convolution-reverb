@@ -73,6 +73,5 @@ A concise introduction to partitioned convolution is available here: <https://th
 | IR length   | 48000 samples (1 s) |
 | End‑to‑end latency | **2.32 ms** |
 | CPU load (peak) | **21 %** |
-| On‑chip SRAM used | ≈ 96 KB |
 
 ---
