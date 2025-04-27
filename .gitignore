@@ -1,0 +1,16 @@
+# ——— macOS / Finder cruft ———
+.DS_Store
+.AppleDouble
+.LSOverride
+# Icon previews
+Icon?
+# Resource-fork files (created when copying to non-HFS volumes)
+._*
+# Spotlight & Trash
+.Spotlight-V100
+.Trashes
+# Volume metadata
+.VolumeIcon.icns
+.fseventsd
+# Time Machine snapshots
+.com.apple.timemachine.donotpresent
