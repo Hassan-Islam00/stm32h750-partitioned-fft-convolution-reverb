@@ -42,6 +42,8 @@ The IR is pre‑split into **P = 12** equal partitions of 512 samples. Each 
 A good source explaining the algorithm used 
 <https://thewolfsound.com/fast-convolution-fft-based-overlap-add-overlap-save-partitioned/>
 
+---
+
 ## Repository Structure
 ```
 <repo>
