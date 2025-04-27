@@ -1,4 +1,4 @@
-# Real-Time Audio DSP on STM32H750
+# Real-Time DSP Convolution Reverb on STM32H750
 
 Real time low-latency convolution-reverb implemented on an **STM32H750** Cortex-M7 microcontroller. Ported from the TI TMS320F28379D version. 
 
