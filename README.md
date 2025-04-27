@@ -29,6 +29,20 @@ This repository contains source code for a **real-time stereo convolution reverb
 
 ---
 
+## Algorithm Summary
+### 1 Ping‑Pong Buffering
+The ADC DMA fills _Buffer A_ while the CPU processes _Buffer B_; the roles swap every 512 samples.
+
+### 2 Uniform Partitioning
+The IR is pre‑split into **P = 12** equal partitions of 512 samples. Each partition is zero‑padded to 1024 samples and stored as a complex spectr
+
+### 3 Per‑Block Processing
+```text
+1. Pad current 512‑sample block to 1024 samples
+2. X[k]  = FFT( x[n] )
+3. Y[k]  = Σₚ X_{p}[k] × IR_FFT[p][k]
+4. y[n]  = IFFT( Y[k] )            ← overlap‑add to output buffer
+
 ## Repository Structure
 ```
 <repo>
