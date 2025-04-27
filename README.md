@@ -2,10 +2,10 @@
 _Uniform‑Partitioned FFT • 48 kHz • 512‑Sample Blocks_
 
 ## Overview
-This repository contains the firmware and tooling for a **real‑time stereo convolution reverb** optimised for the **STMicroelectronics STM32H750**. A uniform 512‑sample, partitioned FFT algorithm, implemented with **Arm CMSIS‑DSP** and intrinsics—achieves 2 ms end‑to‑end latency for a 1‑second impulse response while streaming 48 kHz audio via DMA.
+This repository contains the source code for a **real‑time impulse‑response (IR) reverb** optimised for the **STM32H750**. Implemented with **Arm CMSIS‑DSP** and intrinsics and a partitioned OLA convolution implementation achieves 2 ms end‑to‑end latency for a 1‑second impulse response while streaming 48 kHz audio via DMA.
 
 **Key elements**
-- **Uniform‑partitioned convolution** (512‑sample segments)
+- **Uniform‑partitioned FFT convolution** (512‑sample segments)
 - **Ping‑pong DMA buffering**: ADC and DAC stream continuously with no copy
 - Critical DSP mapped to **ITCM/DTCM** for single‑cycle access
 - Hardware‑accelerated **Arm CMSIS‑DSP** library functions
