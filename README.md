@@ -57,8 +57,7 @@ A concise introduction to partitioned convolution is available here: <https://th
 │   └─ STM32H7xx_HAL_Driver/   # ST HAL implementation
 ├─ Lib/                        # Pre‑built DSP library (libarm_cortexM7lfsp_math.a)
 ├─ STM32H743-DSP.ioc           # STM32CubeMX project descriptor
-├─ *.ld                        # Linker scripts (FLASH, ITCM/DTCM, AXI‑SRAM)
-├─ .gitignore  .gitattributes  .mxproject
+├─ *.ld                        # Linker scripts (FLASH, ITCM/DTCM, SRAM)
 └─ README.md                   # Project documentation
 ```
 
