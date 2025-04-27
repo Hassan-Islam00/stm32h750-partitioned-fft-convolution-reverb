@@ -70,7 +70,7 @@ A concise introduction to partitioned convolution is available here: <https://th
 | Sample rate | 48 kHz stereo |
 | Block size  | 512 samples |
 | FFT size    | 1024 points |
-| IR length   | 6144 samples (1 s) |
+| IR length   | 48000 samples (1 s) |
 | End‑to‑end latency | **2.32 ms** |
 | CPU load (peak) | **21 %** |
 | On‑chip SRAM used | ≈ 96 KB |
