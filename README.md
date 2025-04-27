@@ -20,7 +20,7 @@ The algorithm processes audio at 48 kHz and occupies approximately **21 % of
 | **MCU** | ST STM32H750 @ 480 MHz (Cortex‑M7, FPU + DSP) |
 | **DSP Library** | Arm CMSIS‑DSP v1.15 (`arm_rfft_fast_f32`, `arm_cmplx_mult_cmplx_f32`, …) |
 | **Optimisations** | `__builtin_fmaf`, loop unrolling, Karatsuba‑style complex multiply |
-| **Language** | ISO C17, GCC 13 (`arm‑none‑eabi‑gcc`) |
+| **Language** | C |
 | **Scripting** | MATLAB R2024a (IR preprocessing), Python 3.12 (asset packaging) |
 | **Hardware I/O** | SAI/I²S, QSPI‑Flash (IR storage) |
 | **Debug & Trace** | ST‑LINK V3, on‑chip cycle counter (`CYCCNT`) |
