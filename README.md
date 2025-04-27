@@ -12,6 +12,8 @@ This repository contains the firmware and tooling for a **real‑time stereo con
 - Critical DSP mapped to **ITCM/DTCM** for single‑cycle access
 - Hardware‑accelerated **Arm CMSIS‑DSP** library functions
 
+The algorithm processes audio at 48 kHz and occupies approximately **21 % of the CPU**.
+
 ---
 
 ## Technologies
