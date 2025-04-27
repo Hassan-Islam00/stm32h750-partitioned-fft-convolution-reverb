@@ -1,18 +1,14 @@
 # Real-Time DSP Convolution Reverb on STM32H750
-
-Real time low-latency convolution-reverb implemented on an **STM32H750** Cortex-M7 microcontroller. Ported from the TI TMS320F28379D version. 
-
----
+_Uniform‑Partitioned FFT • 48 kHz • 512‑Sample Blocks_
 
 ## Overview
 This repository contains source code for a **real-time stereo convolution reverb** optimised for the **STMicroelectronics STM32H750**. A uniform 512-sample, partitioned FFT engine—built on **Arm CMSIS-DSP** and intrinsics—achieves sub-2 ms end-to-end latency for a 48K sample convolution (1 second IR) while streaming 48 kHz audio via DMA.
 
----
-
-## Key Features
-- Partitioned overlap-save FFT convolution (uniform 512-sample segments)
-- Zero-copy DMA: ADC and DAC streaming 
+Key elements:
+- **Uniform‑partitioned convolution** (uniform 512-sample segments)
+- **Ping‑pong DMA buffering** Zero-copy DMA: ADC and DAC streaming 
 - Critical DSP mapped to **ITCM/DTCM** for single-cycle low latency access
+- hardware‑accelerated **Arm CMSIS-DSP** library
 
 ---
 
@@ -49,16 +45,18 @@ A good source explaining the algorithm used
 ## Repository Structure
 ```
 <repo>
-├─ firmware/          ─ STM32CubeIDE & CMake sources
-│  ├─ Core/           ─ Drivers, BSP, application code
-│  ├─ Drivers/        ─ HAL/LL subsets
-│  └─ linker/         ─ Memory scripts (ITCM, DTCM, AXI-SRAM, SDRAM)
-├─ tools/
-│  ├─ matlab/         ─ gen_ir_headers.m
-│  └─ python/         ─ asset bundler, CI helpers
-├─ docs/              ─ Schematics, block diagrams, performance plots
-├─ test/              ─ Host-side unit tests (CppUTest)
-└─ CMakeLists.txt     ─ Top-level build
+├─ Core/                   # Application code and BSP
+│   ├─ Inc/                # Header files
+│   ├─ Src/                # C sources (main, convolution, utilities)
+│   └─ Startup/            # Reset handler and vector table
+├─ Drivers/                # Device and HAL libraries
+│   ├─ CMSIS/              # Cortex-M and device headers
+│   └─ STM32H7xx_HAL_Driver/ # ST HAL implementation
+├─ Lib/                    # Pre‑built DSP library (libarm_cortexM7lfsp_math.a)
+├─ STM32H743-DSP.ioc       # STM32CubeMX project descriptor
+├─ *.ld                    # Linker scripts (FLASH, ITCM/DTCM, AXI-SRAM)
+├─ .gitignore, .gitattributes, .mxproject
+└─ README.md               # Project documentation
 ```
 ---
 
