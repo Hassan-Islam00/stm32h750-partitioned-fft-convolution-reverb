@@ -1,8 +1,6 @@
 # Real‑Time DSP Convolution Reverb on STM32H750
 _Uniform‑Partitioned FFT • 48 kHz • 512‑Sample Blocks_
 
----
-
 ## Overview
 This repository contains the firmware and tooling for a **real‑time stereo convolution reverb** optimised for the **STMicroelectronics STM32H750**. A uniform 512‑sample, partitioned FFT engine—implemented with **Arm CMSIS‑DSP** and hand‑written intrinsics—achieves sub‑2 ms end‑to‑end latency for a 1‑second impulse response while streaming 48 kHz audio via DMA.
 
