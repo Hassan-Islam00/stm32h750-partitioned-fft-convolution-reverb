@@ -4,8 +4,8 @@ Real time low-latency convolution-reverb implemented on an **STM32H750** Cortex-
 
 ---
 
-## Project Overview
-This repository provides firmware, build scripts, and ancillary tooling for a **real-time stereo convolution reverb** optimised for the **STMicroelectronics STM32H750**. A uniform 512-sample, partitioned FFT engine—built on **Arm CMSIS-DSP** and hand-tuned intrinsics—achieves sub-2 ms end-to-end latency while streaming 48 kHz audio via DMA.
+## Overview
+This repository contains source code for a **real-time stereo convolution reverb** optimised for the **STMicroelectronics STM32H750**. A uniform 512-sample, partitioned FFT engine—built on **Arm CMSIS-DSP** and intrinsics—achieves sub-2 ms end-to-end latency for a 48K sample convolution (1 second IR) while streaming 48 kHz audio via DMA.
 
 ---
 
